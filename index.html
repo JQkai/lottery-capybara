@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🦫 卡比巴拉抽獎大會</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="king-wrapper">
+        <div id="kingCapybara" class="king-capybara">
+          <div class="crown">👑</div>
+          <div class="king-body">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="eye left"><span class="shine"></span></div>
+            <div class="eye right"><span class="shine"></span></div>
+            <div class="snout">
+              <div class="nostril left"></div>
+              <div class="nostril right"></div>
+              <div class="teeth"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>卡比巴拉抽獎大會</h1>
+      <p class="subtitle">大王召集全體手下，命運即將揭曉！</p>
+    </header>
+
+    <div class="controls">
+      <div class="draw-count-control">
+        <span class="control-label">抽出人數</span>
+        <button id="decreaseCount" class="count-btn">－</button>
+        <span id="drawCount" class="count-display">1</span>
+        <button id="increaseCount" class="count-btn">＋</button>
+      </div>
+      <button id="drawBtn" class="draw-btn">🎰 開始抽獎！</button>
+      <button id="resetBtn" class="reset-btn">🔄 重置</button>
+    </div>
+
+    <div class="info-bar">
+      <span id="participantInfo">參與人數：<strong>8</strong> / 8</span>
+      <span id="statusMsg" class="status-msg">點擊手下卡片可取消 / 恢復參與資格</span>
+    </div>
+
+    <div id="minionsGrid" class="minions-grid"></div>
+  </div>
+
+  <div id="winnerOverlay" class="winner-overlay hidden">
+    <div class="winner-box">
+      <div class="winner-title">🏆 恭喜獲獎！🏆</div>
+      <div id="winnersList" class="winners-list"></div>
+      <button id="closeModal" class="close-btn">✨ 再抽一次 ✨</button>
+    </div>
+    <canvas id="confettiCanvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
